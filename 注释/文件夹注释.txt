@@ -1,4 +1,4 @@
-GlacierRPG/
+ETN/
 │
 ├── project.godot                     # Godot 主项目文件
 ├── default_env.tres                  # 默认环境设置
