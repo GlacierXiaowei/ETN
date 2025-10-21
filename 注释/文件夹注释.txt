@@ -1,0 +1,59 @@
+GlacierRPG/
+│
+├── project.godot                     # Godot 主项目文件
+├── default_env.tres                  # 默认环境设置
+├── icon.png                          # 游戏图标（编辑器显示）
+│
+├── assets/                           # 所有资源文件（图片/音频/字体/视频等）
+│   ├── sprites/                      # 精灵素材（人物、物品、特效等）
+│   │   ├── player/
+│   │   ├── npc/
+│   │   ├── enemies/
+│   │   └── effects/
+│   ├── tilesets/                     # 地图用的瓦片图集
+│   ├── ui/                           # 按钮、对话框、图标等UI资源
+│   ├── fonts/                        # 游戏字体（ttf/otf）
+│   ├── audio/
+│   │   ├── bgm/                      # 背景音乐
+│   │   └── sfx/                      # 音效（如按钮点击、走路声）
+│   └── video/                        # 若有开场动画、剧情视频等
+│
+├── scenes/                           # 所有 Godot 场景文件（*.tscn）
+│   ├── main/                         # 入口场景（主菜单、设置等）
+│   ├── world/                        # 地图类场景（村庄、城镇、迷宫）
+│   ├── ui/                           # 界面相关场景（对话框、物品栏、设置界面）
+│   ├── characters/                   # 人物/NPC场景（带动画或逻辑的）
+│   └── effects/                      # 特效场景（粒子、闪光、过渡动画）
+│
+├── scripts/                          # 所有 GDScript 脚本文件
+│   ├── core/                         # 核心逻辑（如全局管理器、存档系统）
+│   ├── player/                       # 玩家相关脚本（移动、交互）
+│   ├── npc/                          # NPC逻辑（对话、任务）
+│   ├── ui/                           # 界面脚本（对话框逻辑、菜单切换）
+│   ├── systems/                      # 系统层（场景切换、文件IO、数据加载）
+│   └── utils/                        # 工具函数、通用脚本（时间、路径、调试）
+│
+├── data/                             # 外部数据（剧情、对话、物品表等）
+│   ├── dialogue/                     # 对话文本（CSV 或 JSON）
+│   ├── items/                        # 物品信息表（如名称、描述、价格）
+│   ├── quests/                       # 任务系统数据
+│   ├── config/                       # 玩家设置（分辨率、语言）
+│   └── localization/                 # 多语言文本（如 zh_CN.json, en_US.json）
+│
+├── saves/                            # 存档目录（可用 OS.get_user_data_dir()）
+│   └── autosave/                     # 自动存档或快速存档
+│
+├── shaders/                          # 着色器文件（像素风特效、滤镜等）
+│
+├── addons/                           # Godot 插件（如对话系统、调试工具）
+│
+├── docs/                             # 文档类（开发笔记、策划文档）
+│   ├── design_doc.md
+│   ├── update_log.md
+│   └── art_reference/
+│
+├── exports/                          # 导出构建目录（Windows / Android 构建）
+│   ├── windows/
+│   └── android/
+│
+└── .gitignore                        # Git 忽略文件
