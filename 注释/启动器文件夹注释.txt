@@ -1,0 +1,16 @@
+ETN_Project/
+├── Launcher/                    # 启动器项目
+│   ├── project.godot            # 启动器 Godot 项目的场景与脚本
+│   ├── assets/                  # 启动器用的图片、音效等资源
+│   └── launcher_script.gd       # 启动器的脚本
+│
+├── Game/                        # 游戏主程序项目
+│   ├── project.godot            # 游戏主程序的 Godot 场景与脚本
+│   ├── assets/                  # 游戏的资源（图片、音效等）
+│   └── game_script.gd          # 游戏的脚本
+│
+└── builds/                      # 输出文件夹（包含打包后的 EXE 和资源）
+    ├── ETN_Launcher.exe         # 启动器 EXE
+    ├── ETN_Game.exe             # 游戏主程序 EXE
+    ├── assets/                  # 包含游戏资源的文件夹（如果你不打包成 PCK）
+    └── resources/               # 更新文件、配置文件等
