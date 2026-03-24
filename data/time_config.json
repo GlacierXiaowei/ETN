@@ -1,0 +1,25 @@
+{
+  "periods": {
+    "weekday": [
+      { "id": "morning_class", "name": "早读", "action_points": 0 },
+      { "id": "break", "name": "大课间", "action_points": 1 },
+      { "id": "lunch", "name": "午休", "action_points_random": [1, 2] },
+      { "id": "after_school", "name": "放学后", "action_points_random": [1, 2] },
+      { "id": "night", "name": "夜间", "action_points": 2 }
+    ],
+    "weekend": [
+      { "id": "morning", "name": "上午", "action_points": 3 },
+      { "id": "afternoon", "name": "下午", "action_points": 3 },
+      { "id": "night", "name": "夜间", "action_points": 3 }
+    ]
+  },
+  "weekday_names": ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+  "actions": [
+    { "id": "idle", "name": "发呆", "cost": 1, "type": "instant" },
+    { "id": "rest", "name": "休息", "cost": 1, "type": "instant" },
+    { "id": "eat", "name": "吃饭", "cost": 0, "type": "instant" },
+    { "id": "library", "name": "去图书馆", "cost": 1, "type": "scene", "scene": "res://scenes/library.tscn" },
+    { "id": "playground", "name": "去操场", "cost": 1, "type": "scene", "scene": "res://scenes/playground.tscn" },
+    { "id": "social", "name": "社交", "cost": 2, "type": "scene", "scene": "res://scenes/social.tscn" }
+  ]
+}

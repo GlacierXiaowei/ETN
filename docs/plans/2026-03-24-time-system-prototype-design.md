@@ -1,7 +1,7 @@
 # 时间系统原型技术设计文档
 
 > 创建日期：2026-03-24
-> 状态：待实现
+> 状态：已完成 ✓
 
 ---
 
@@ -280,24 +280,59 @@ func _on_period_change(new_period, is_weekend):
 
 原型验证后需要扩展的功能：
 
-| 功能 | 说明 |
-|------|------|
-| 完整NPC日程系统 | 天数+时段+章节的日程配置 |
-| 任务系统联动 | 任务完成影响时间/NPC |
-| 章节系统 | 提前完成→章节提前结束 |
-| 存档系统 | 保存时间状态 |
-| UI动画效果 | 像素风、过渡动画 |
+| 功能 | 说明 | 优先级 |
+|------|------|--------|
+| 完整NPC日程系统 | 天数+时段+章节的日程配置 | 高 |
+| 任务系统联动 | 任务完成影响时间/NPC | 高 |
+| 存档系统 | 保存时间状态 | 高 |
+| 章节系统 | 提前完成→章节提前结束 | 中 |
+| UI动画效果 | 像素风、过渡动画 | 低 |
+
+---
+
+## 12. 活动系统设计（新增）
+
+### 12.1 活动流程
+
+```
+点击活动按钮 → start_activity() → 进入场景 → mark_activity_started() → 完成探索 → finish_activity()
+                    ↓
+               扣除行动点
+                    ↓
+            is_activity_started = false
+                    ↓
+              可取消并返还点数
+```
+
+### 12.2 活动状态
+
+| 状态 | 说明 | 取消返还 |
+|------|------|----------|
+| 进入场景后 | `is_activity_started = false` | ✓ 返还 |
+| 第一次交互后 | `is_activity_started = true` | ✗ 不返还 |
+
+### 12.3 API
+
+- `start_activity(activity_id)` - 开始活动
+- `mark_activity_started()` - 标记活动已开始交互
+- `finish_activity()` - 完成活动
+- `cancel_activity()` - 取消活动
+- `is_in_activity()` - 是否在活动中
+- `can_refund_activity()` - 是否可返还行动点
 
 ---
 
 ## 11. 实现检查清单
 
-- [ ] 创建Godot项目
-- [ ] 实现TimeSystem.gd（autoload）
-- [ ] 实现GameState.gd（autoload）
-- [ ] 创建time_config.json
-- [ ] 创建TimeUI场景和脚本
-- [ ] 创建ActionButton场景和脚本
-- [ ] 创建原型主场景
-- [ ] 实现简易NPC响应
-- [ ] 测试验证核心机制
+- [x] 创建Godot项目
+- [x] 实现TimeSystem.gd（autoload）
+- [x] 实现GameState.gd（autoload）
+- [x] 创建time_config.json
+- [x] 创建TimeUI场景和脚本
+- [x] 创建ActionButton场景和脚本
+- [x] 创建原型主场景
+- [x] 实现简易NPC响应
+- [x] 测试验证核心机制
+- [x] 实现活动系统（新增）
+- [x] 添加调试模式开关
+- [x] 添加配置加载错误处理

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://simplenpc001"]
+
+[ext_resource type="Script" path="res://systems/time_system/simple_npc.gd" id="1"]
+
+[node name="SimpleNPC" type="HBoxContainer"]
+offset_right = 200.0
+offset_bottom = 30.0
+script = ExtResource("1")
+
+[node name="name_label" type="Label" parent="."]
+layout_mode = 2
+text = "小明: "
+
+[node name="location_label" type="Label" parent="."]
+layout_mode = 2
+text = "教室"

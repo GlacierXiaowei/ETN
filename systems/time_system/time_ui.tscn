@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://timeui001"]
+
+[ext_resource type="Script" path="res://systems/time_system/time_ui.gd" id="1"]
+
+[node name="TimeUI" type="MarginContainer"]
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 80.0
+script = ExtResource("1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="day_label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "第1天"
+
+[node name="weekday_label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "周一"
+
+[node name="period_label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "早读"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="points_label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "行动点: "
+
+[node name="points_text" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "0"

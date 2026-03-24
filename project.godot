@@ -10,9 +10,16 @@ config_version=5
 
 [application]
 
-config/name="新建游戏项目"
+config/name="ETN"
+run/main_scene="res://prototypes/time_prototype.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameSettings="*uid://cmrsn6q423tm8"
+TimeSystem="*uid://b3cwluv8r3pq3"
+GameState="*uid://c25xvyys0uj01"
 
 [physics]
 

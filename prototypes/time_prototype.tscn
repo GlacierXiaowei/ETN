@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://boaesk4ai8by6"]
+
+[ext_resource type="Script" uid="uid://sxyftax0roqi" path="res://prototypes/time_prototype.gd" id="1"]
+[ext_resource type="PackedScene" path="res://systems/time_system/time_ui.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://systems/time_system/simple_npc.tscn" id="3"]
+
+[node name="TimePrototype" type="VBoxContainer" unique_id=2110451883]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=491828890]
+layout_mode = 2
+
+[node name="TimeUI" parent="MarginContainer" unique_id=1075971600 instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1995274984]
+layout_mode = 2
+
+[node name="NPCContainer" type="VBoxContainer" parent="." unique_id=1325479430]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NPCContainer" unique_id=1198098437]
+layout_mode = 2
+text = "NPC位置："
+
+[node name="SimpleNPC" parent="NPCContainer" unique_id=1948845810 instance=ExtResource("3")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="." unique_id=747855611]
+layout_mode = 2
+
+[node name="ActionsLabel" type="Label" parent="." unique_id=519184469]
+layout_mode = 2
+text = "行动："
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1985840076]
+layout_mode = 2
+columns = 3
+
+[node name="SkipButton" type="Button" parent="." unique_id=977817161]
+layout_mode = 2
+text = "跳过当前时段"
+
+[node name="HSeparator3" type="HSeparator" parent="." unique_id=1450784460]
+layout_mode = 2
+
+[node name="DebugLabel" type="Label" parent="." unique_id=1290294685]
+layout_mode = 2
+text = "调试：按F5运行，点击行动按钮测试时间系统"
+
+[node name="HSeparator4" type="HSeparator" parent="." unique_id=1726754414]
+layout_mode = 2
+
+[node name="SettingsLabel" type="Label" parent="." unique_id=1896997782]
+layout_mode = 2
+text = "设置："
+
+[node name="DebugCheckBox" type="CheckBox" parent="." unique_id=729896759]
+layout_mode = 2
+text = "调试模式"
