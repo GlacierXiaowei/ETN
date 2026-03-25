@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 GameSettings="*uid://cmrsn6q423tm8"
 TimeSystem="*uid://b3cwluv8r3pq3"
 GameState="*uid://c25xvyys0uj01"
+NPCScheduler="*uid://em8a5xbpb8um"
 
 [physics]
 

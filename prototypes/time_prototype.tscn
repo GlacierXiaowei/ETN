@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://boaesk4ai8by6"]
 
 [ext_resource type="Script" uid="uid://sxyftax0roqi" path="res://prototypes/time_prototype.gd" id="1"]
-[ext_resource type="PackedScene" path="res://systems/time_system/time_ui.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://systems/time_system/simple_npc.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://timeui001" path="res://systems/time_system/time_ui.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://simplenpc001" path="res://systems/time_system/simple_npc.tscn" id="3"]
 
 [node name="TimePrototype" type="VBoxContainer" unique_id=2110451883]
 anchors_preset = 15

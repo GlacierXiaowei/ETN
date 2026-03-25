@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dam8psg47a3lb"]
+
+[ext_resource type="Script" uid="uid://cel4pxwjla4br" path="res://prototypes/npc_schedule_prototype.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://timeui001" path="res://systems/time_system/time_ui.tscn" id="2"]
+
+[node name="NPCSchedulePrototype" type="VBoxContainer" unique_id=747610347]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=625705296]
+layout_mode = 2
+
+[node name="TimeUI" parent="MarginContainer" unique_id=1180237428 instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=319687899]
+layout_mode = 2
+
+[node name="NPCLabel" type="Label" parent="." unique_id=1615600137]
+layout_mode = 2
+text = "NPC日程状态："
+
+[node name="NPCContainer" type="VBoxContainer" parent="." unique_id=1267768651]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="." unique_id=1133719071]
+layout_mode = 2
+
+[node name="TestLabel" type="Label" parent="." unique_id=934349826]
+layout_mode = 2
+text = "测试控制："
+
+[node name="TestControls" type="VBoxContainer" parent="." unique_id=597876767]
+layout_mode = 2
+
+[node name="DayLabel" type="Label" parent="TestControls" unique_id=1174701199]
+layout_mode = 2
+text = "当前天数: 1"
+
+[node name="ChapterLabel" type="Label" parent="TestControls" unique_id=1655958799]
+layout_mode = 2
+text = "章节: 1 | 阶段: (默认)"
+
+[node name="ButtonRow" type="HBoxContainer" parent="TestControls" unique_id=379661957]
+layout_mode = 2
+
+[node name="AdvancePeriodBtn" type="Button" parent="TestControls/ButtonRow" unique_id=123140953]
+layout_mode = 2
+text = "推进时段"
+
+[node name="AdvanceDayBtn" type="Button" parent="TestControls/ButtonRow" unique_id=1451406202]
+layout_mode = 2
+text = "推进天数"
+
+[node name="SetDay3Btn" type="Button" parent="TestControls/ButtonRow" unique_id=661908751]
+layout_mode = 2
+text = "设为第3天"
+
+[node name="SetChapter2Btn" type="Button" parent="TestControls/ButtonRow" unique_id=327575713]
+layout_mode = 2
+text = "切换章节2"
+
+[node name="HSeparator3" type="HSeparator" parent="." unique_id=1280415059]
+layout_mode = 2
+
+[node name="HelpLabel" type="Label" parent="." unique_id=1714172797]
+layout_mode = 2
+text = "测试说明：
+- 推进时段：NPC位置会根据日程更新
+- 设为第3天：林小婉会消失（请假）
+- 切换章节2：NPC使用默认位置（无章节2数据）"
+
+[connection signal="pressed" from="TestControls/ButtonRow/AdvancePeriodBtn" to="." method="_on_advance_period_pressed"]
+[connection signal="pressed" from="TestControls/ButtonRow/AdvanceDayBtn" to="." method="_on_advance_day_pressed"]
+[connection signal="pressed" from="TestControls/ButtonRow/SetDay3Btn" to="." method="_on_set_day_3_pressed"]
+[connection signal="pressed" from="TestControls/ButtonRow/SetChapter2Btn" to="." method="_on_set_chapter_2_pressed"]
